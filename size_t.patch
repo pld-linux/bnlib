@@ -1,0 +1,11 @@
+--- bnlib-1.1.4/germtest.c~	2005-04-03 16:49:29.000000000 +0200
++++ bnlib-1.1.4/germtest.c	2025-02-03 23:47:13.053330530 +0100
+@@ -285,7 +285,7 @@
+ int
+ main(int argc, char **argv)
+ {
+-	unsigned len;
++	size_t len;
+ 	struct BigNum bn;
+ 	unsigned char *buf;
+ 

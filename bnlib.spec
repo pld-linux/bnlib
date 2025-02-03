@@ -2,13 +2,14 @@ Summary:	BigNum multi-precision integer math library
 Summary(pl.UTF-8):	BigNum - biblioteka arytmetyki całkowitej wielokrotnej precyzji
 Name:		bnlib
 Version:	1.1.4
-Release:	2
+Release:	3
 License:	GPL v2 or commercial
 Group:		Libraries
 Source0:	http://philzimmermann.com/bnlib/bnlib114.zip
 # Source0-md5:	1b4ff1e1f41c812db03a7c44b27d44ee
 Patch0:		%{name}-ac.patch
 Patch1:		%{name}-shared.patch
+Patch2:		size_t.patch
 URL:		http://philzimmermann.com/EN/bnlib/bnlib.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -64,6 +65,7 @@ Statyczna biblioteka BigNum.
 %{__rm} -r bnlib114
 %patch -P 0 -p1
 %patch -P 1 -p1
+%patch -P 2 -p1
 
 # extract licensing information
 head -n29 legal.c > LEGAL
